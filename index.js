@@ -5,7 +5,13 @@ const { config } = require('dotenv'); // import config  from dot env using objec
 const client = new Client({
     disableEveryone: true
 });
-
+//adding a bit of flavour to the bot each time it is activated
+const dndLingo = () => {
+    const langArr = ['Infernal', 'Elvish', 'Common', 'Celestial', 'UnderCommon','Orcish', 'Draconic', 'Dwarvish']
+    const langInt = Math.floor(Math.random() * langArr.length)
+    const language = langArr[langInt].toString('')
+    return language
+}
 
 
 config({
@@ -15,6 +21,12 @@ config({
 
 client.on("ready", () => {
     console.log(`SIDSA is online`)
+    
+    client.user.setPresence({
+        status:'online',
+        game: { name: dndLingo(),
+                type:'LISTENING' }
+    });
     
 });
 
