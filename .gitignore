@@ -5,3 +5,8 @@
 
 #API Keys
 .env
+
+
+#Role IDs
+#const dm = '<@!676465656228478990>'
+#const elven = '675133738157342739'
