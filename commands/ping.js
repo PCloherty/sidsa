@@ -1,14 +1,12 @@
 module.exports = {
-    name: 'ping',
-    description: 'command to ping the server',
-    execute(message, args) {
-        message.channel.send(`Pong!`);
+  name: "ping",
+  description: "command to ping the server",
+  execute(message, args) {
+    message.channel.send(`Pong!`);
+  }
+};
 
-    }
-}
-
-
-//-------------------------------old code for future reference 
+//-------------------------------old code for future reference
 // if (cmd === 'ping') {
 //     const msg = await message.channel.send('pinging...');
 //     //console.log(message.guild.roles)
